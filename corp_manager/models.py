@@ -29,6 +29,8 @@ class Filings(models.Model):
     report_nm = models.TextField() #보고서명: 공시구분 + 보고서명 + 기타정보 
     rcept_dt = models.CharField(max_length = 8) #공시접수일자 (YYYYMMDD)
     rm = models.TextField(null = True, blank = True) #비고 
+    is_fs_extracted = models.BooleanField(default= False) #재무제표 추출완료 여부
+    is_prelimary = models.BooleanField(default= False) #잠정실적 여부 
 
 #재무제표 
 class FinancialStatemnent(models.Model):
