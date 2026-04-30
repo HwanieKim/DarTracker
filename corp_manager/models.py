@@ -33,8 +33,8 @@ class Filings(models.Model):
     is_prelimary = models.BooleanField(default= False) #잠정실적 여부 
 
 #재무제표 
-class FinancialStatemnent(models.Model):
-    class reprt_code_choices(models.IntegerChoices): #보고서 코드
+class FinancialStatement(models.Model):
+    class reprt_code_choices(models.TextChoices): #보고서 코드
         Q1 = "11013", "1분기보고서"
         Q2 = "11012", "반기보고서"
         Q3 = "11014", "3분기보고서"
